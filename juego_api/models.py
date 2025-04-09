@@ -11,6 +11,7 @@ class Palabra(models.Model):
     nivel = models.IntegerField(choices=NIVELES)
     pista = models.CharField(max_length=255, blank=True, null=True)
     imagen_url = models.ImageField(upload_to='imagenes/', blank=True, null=True)
-
+    anwser = models.CharField(max_length=100, blank=True, null=True)
+    
     def __str__(self):
         return self.texto
